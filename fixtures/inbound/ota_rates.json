@@ -1,0 +1,7 @@
+[
+  {"channel": "Booking.com", "date": "2026-09-08", "room_type_id": "classic", "observed_rate": 138},
+  {"channel": "Expedia", "date": "2026-09-08", "room_type_id": "classic", "observed_rate": 155},
+  {"channel": "Google Hotel Ads", "date": "2026-09-08", "room_type_id": "classic", "observed_rate": 160},
+  {"channel": "Booking.com", "date": "2026-09-09", "room_type_id": "deluxe", "observed_rate": 205},
+  {"channel": "Expedia", "date": "2026-09-09", "room_type_id": "deluxe", "observed_rate": 220}
+]

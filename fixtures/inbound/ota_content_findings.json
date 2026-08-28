@@ -1,0 +1,12 @@
+[
+  {"channel": "Expedia", "kind": "photos", "severity": "high",
+   "detail": "4 of 16 photos missing from the master set - the pool, terrace dining, cabana row and sea-view deck frames are not live."},
+  {"channel": "Expedia", "kind": "amenities", "severity": "medium",
+   "detail": "Outdoor pool and valet parking are not flagged, though both are available."},
+  {"channel": "Booking.com", "kind": "description", "severity": "medium",
+   "detail": "Description is 190 characters - well under the 400-character threshold and missing the amenity terms the ranking model reads (pool, EV charging, family rooms)."},
+  {"channel": "Airbnb", "kind": "amenities", "severity": "medium",
+   "detail": "EV charging and family rooms are not flagged, though both are available."},
+  {"channel": "Google Hotel Ads", "kind": "inconsistency", "severity": "high",
+   "detail": "Banner still advertising \"Late-Summer Escape -15%\", which ended two weeks ago."}
+]

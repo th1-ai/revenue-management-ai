@@ -1,0 +1,422 @@
+[
+  {
+    "date": "2026-09-01",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-01",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-01",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-01",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-02",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-02",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-02",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-02",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-03",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 2
+  },
+  {
+    "date": "2026-09-03",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 2
+  },
+  {
+    "date": "2026-09-03",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 2
+  },
+  {
+    "date": "2026-09-03",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 2
+  },
+  {
+    "date": "2026-09-04",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-04",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-04",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-04",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-05",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-05",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-05",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-05",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-06",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-06",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-06",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-06",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-07",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-07",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-07",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-07",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-08",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-08",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-08",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-08",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-09",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-09",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-09",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-09",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 6
+  },
+  {
+    "date": "2026-09-10",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-10",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-10",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-10",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-11",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-11",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-11",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-11",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-12",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-12",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-12",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-12",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-13",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-13",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-13",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-13",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-14",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-14",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-14",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-14",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-15",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-15",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-15",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-15",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": -14
+  },
+  {
+    "date": "2026-09-16",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": -9
+  },
+  {
+    "date": "2026-09-16",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": -9
+  },
+  {
+    "date": "2026-09-16",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": -9
+  },
+  {
+    "date": "2026-09-16",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": -9
+  },
+  {
+    "date": "2026-09-17",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": -10
+  },
+  {
+    "date": "2026-09-17",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": -10
+  },
+  {
+    "date": "2026-09-17",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": -10
+  },
+  {
+    "date": "2026-09-17",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": -10
+  },
+  {
+    "date": "2026-09-18",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-18",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-18",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-18",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-19",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-19",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-19",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-19",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 4
+  },
+  {
+    "date": "2026-09-20",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-20",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-20",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-20",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 0
+  },
+  {
+    "date": "2026-09-21",
+    "room_type_id": "classic",
+    "pace_vs_ly_pts": 5
+  },
+  {
+    "date": "2026-09-21",
+    "room_type_id": "deluxe",
+    "pace_vs_ly_pts": 5
+  },
+  {
+    "date": "2026-09-21",
+    "room_type_id": "junior-suite",
+    "pace_vs_ly_pts": 5
+  },
+  {
+    "date": "2026-09-21",
+    "room_type_id": "aurora-suite",
+    "pace_vs_ly_pts": 5
+  }
+]

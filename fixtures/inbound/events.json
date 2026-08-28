@@ -1,0 +1,11 @@
+[
+  {"name": "Riverfront Tech Summit", "kind": "congress", "category": "event",
+   "start_date": "2026-09-08", "end_date": "2026-09-09",
+   "note": "predicted attendance 3,400"},
+  {"name": "Quiet midweek window", "kind": "low_demand", "category": "event",
+   "start_date": "2026-09-14", "end_date": "2026-09-15", "note": ""},
+  {"name": "Atlantic squall", "kind": "rain", "category": "weather",
+   "start_date": "2026-09-06", "end_date": "2026-09-07", "note": ""},
+  {"name": "Late-summer high", "kind": "sunny", "category": "weather",
+   "start_date": "2026-09-19", "end_date": "2026-09-20", "note": ""}
+]

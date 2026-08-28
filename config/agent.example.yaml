@@ -1,0 +1,180 @@
+# ---------------------------------------------------------------------------
+# agent.yaml - Revenue Management AI's own knobs. `make setup` copies this to
+# config/agent.yaml; edit that copy, this example stays as a clean reference.
+#
+# Every room type your PMS actually sells needs a row under `room_types:`
+# below - the engine cannot price a room type it does not know the base rate,
+# floor and ceiling for. Everything else has a sane default.
+# ---------------------------------------------------------------------------
+
+# Which of pms/email/messaging this agent actually reads from - it has no
+# guest inbox and sends no messages at all, see docs/integrations.md. Keeps
+# `make run`'s SAMPLE DATA warning honest when `systems.email.adapter`/
+# `systems.messaging.adapter` are left as `mock`. See
+# core/adapters/__init__.py:_systems_used.
+systems_used: [pms]
+
+# How far ahead the engine reprices. 21 nights matches the behaviour this
+# repo was built from; raise it once you trust the guardrails.
+horizon_nights: 21
+
+# advise   - every proposal waits for a human, nothing ever auto-publishes.
+# guarded  - proposals inside every guardrail auto-publish; anything a
+#            guardrail holds waits for a human. This is the honest middle
+#            ground the roster promise describes. (default)
+# full     - the same auto-eligible set as guarded. The floor, ceiling and
+#            ±10%/day cap are structural, not a mode switch - they always
+#            apply, and MLOS changes are ALWAYS held regardless of mode -
+#            see docs/how-it-works.md "Design decisions" #8.
+autopilot: guarded
+
+# full   - the whole repricing engine: pace, comp rates, events, gap nights,
+#          MLOS, deep cuts, length-of-stay offers. (default)
+# simple - a four-input counter-offer for a hotel that wants less machinery.
+#          See docs/how-it-works.md "Simple mode".
+engine: full
+
+# Your room types. The key is what this repo calls the room type everywhere
+# (fixtures, exports, the review queue) - make it match your PMS's own id or
+# code where you can, so a human never has to translate between the two.
+# base_rate is the un-adjusted rack rate the season/weekend multipliers below
+# apply to. floor and ceiling are absolute, in hotel.currency - the engine
+# will not publish outside them, ever, in any autopilot mode.
+room_types:
+  classic:
+    name: "Classic Room"
+    base_rate: 140
+    floor: 95
+    ceiling: 220
+  deluxe:
+    name: "Deluxe Room"
+    base_rate: 190
+    floor: 130
+    ceiling: 290
+  junior-suite:
+    name: "Junior Suite"
+    base_rate: 260
+    floor: 180
+    ceiling: 400
+  aurora-suite:
+    name: "Aurora Suite"
+    base_rate: 420
+    floor: 290
+    ceiling: 650
+
+# Season multiplier per calendar month (Jan first). Multiplies base_rate.
+# The shipped curve is a generic leisure-market shape - replace it with your
+# own once you know your property's real seasonality.
+season_multiplier:
+  [0.85, 0.85, 0.90, 1.00, 1.10, 1.25, 1.35, 1.35, 1.15, 1.00, 0.90, 0.95]
+
+# Multiplies the season-adjusted rate on Friday and Saturday nights.
+weekend_multiplier: 1.08
+
+# The house formula rounds every price to the nearest multiple of this.
+round_to: 5
+
+# The rule toggles the engine reads every run. Turning one off is the
+# fastest way to see, and prove, exactly what it does - see
+# docs/how-it-works.md "The repricing steps".
+rules:
+  event_radar: true       # event uplift contributes to the ordinary move
+  comp_guard: true        # comp-set median contributes to the ordinary move
+  pace_moves: true        # pickup pace contributes to the ordinary move
+  rate_floor: true        # clamp cuts at room_types.<id>.floor
+  rate_ceiling: true      # clamp rises at room_types.<id>.ceiling
+  max_move: true          # +/-10%/day cap (max_move_pct below)
+  mlos_guard: true        # set/release the minimum-stay restriction
+  gap_fill: true          # discount a lone soft night between two full ones
+  near_manual: true       # hold the near-term window for a human (autopilot)
+  hold_threshold: true    # hold MLOS changes and deep cuts (autopilot)
+  comp_distance: true     # hold moves far from the comp-set median (autopilot)
+
+# The ordinary move: an additive percentage stack, each only when its rule
+# (above) is on.
+move_pct:
+  event_congress: 0.08     # a congress-class event covering the night
+  event_other: 0.04        # any other uplift event covering the night
+  pace_up: 0.05             # pace > pace_up_threshold_pts and occ > 80
+  pace_down: -0.05          # pace < -pace_up_threshold_pts
+  comp_guard: 0.04          # comp median > comp_guard_threshold and running move < 6%
+pace_up_threshold_pts: 3
+comp_guard_threshold: 1.10
+
+# The +/-10%/day cap, off the formula rate (not off an existing override -
+# see docs/how-it-works.md "The house rate formula").
+max_move_pct: 0.10
+
+# Below this, a move is not worth proposing at all.
+min_move_eur: 3
+
+# A slow-market deep cut fires when pace is at or below deep_cut_pace_pts
+# AND occupancy is under deep_cut_occ_pct.
+deep_cut_pace_pts: -11
+deep_cut_occ_pct: 55
+deep_cut_pct: 0.75
+
+# A gap night: both neighbours at or above gap_neighbour_occ_pct, this night
+# at least gap_drop_pts below both.
+gap_neighbour_occ_pct: 85
+gap_drop_pts: 25
+gap_cut_pct: 0.80
+
+# Minimum-stay (MLOS). Set to 2 when an uplift event covers the night at
+# mlos_event_occ_pct+ occupancy, or on a weekend at mlos_weekend_occ_pct+.
+# Release back to 1 once occupancy falls under mlos_release_occ_pct.
+mlos_event_occ_pct: 80
+mlos_weekend_occ_pct: 90
+mlos_release_occ_pct: 60
+
+# Length-of-stay offers: candidate nights under offer_occ_pct occupancy with
+# pace at or below offer_pace_pts, softest first, capped at max_offers.
+offer_occ_pct: 55
+offer_pace_pts: -8
+max_offers: 3
+
+# Autopilot guardrails (only matter when autopilot is guarded or full).
+near_manual_days: 3        # D+0 to D+this many is always the duty manager's call
+hold_cut_pct: -8            # a cut deeper than this is always held
+comp_distance_pct: 0.15     # outside +/- this band of the comp median is held
+
+# Simple mode config (config/agent.yaml: engine: simple). One entry per room
+# type is not needed - Simple mode reprices off "reference" (below) and
+# scales every other room type by its own base_rate ratio.
+simple:
+  # Must be one of the ids under room_types: above - if you replace the
+  # sample room types with your own (workflows/00-setup.md step 3), update
+  # this too. make doctor's "simple engine" line checks the two agree and
+  # names the valid options if they do not.
+  reference_room_type: classic
+  base_price: 130
+  min_price: 95
+  max_price: 300
+  target_occupancy_pct: 80
+  # very_low | low | standard | high | very_high
+  aggressiveness: standard
+
+# Both sub-agents are off by default - the repricing loop above is fully
+# useful without either. See docs/sub-agents.md.
+subagents:
+  demand_forecasting:        # "The Oracle"
+    enabled: false
+    weather_signal: true      # rain/sunny fronts move the forecast only, never a price
+  ota_content_parity:        # "The Cartographer"
+    enabled: false
+    content_sync: true        # off = rate-parity checks only, no content scoring
+    parity_tolerance_pct: 0.01   # an OTA rate this much below direct is a violation
+    channels: ["Booking.com", "Expedia", "Google Hotel Ads", "Airbnb"]
+
+# How often `tools/run.py --watch` re-optimizes, and what `make schedule`
+# prints by default. See scheduler/ for cron/launchd/systemd.
+schedule:
+  repricing:
+    command: "tools/run.py --once"
+    cadence: "0,30 * * * *"          # twice-hourly, on the hour and half hour
+  demand_forecast:
+    command: "tools/run.py --once --forecast"
+    cadence: "0 6 * * *"             # daily at 06:00 - only does anything once enabled above
+  ota_parity:
+    command: "tools/run.py --once --parity"
+    cadence: "0 */4 * * *"           # every four hours - only does anything once enabled above

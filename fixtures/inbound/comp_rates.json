@@ -1,0 +1,14 @@
+[
+  {"date": "2026-09-01", "competitor": "Riverside Court", "rate_multiplier": 1.10, "note": ""},
+  {"date": "2026-09-01", "competitor": "The Belmont", "rate_multiplier": 1.14, "note": ""},
+  {"date": "2026-09-02", "competitor": "Riverside Court", "rate_multiplier": 1.11, "note": ""},
+  {"date": "2026-09-02", "competitor": "The Belmont", "rate_multiplier": 1.13, "note": ""},
+  {"date": "2026-09-08", "competitor": "Riverside Court", "rate_multiplier": 1.16, "note": "Raised for the summit"},
+  {"date": "2026-09-08", "competitor": "The Belmont", "rate_multiplier": 1.18, "note": ""},
+  {"date": "2026-09-09", "competitor": "Riverside Court", "rate_multiplier": 1.17, "note": "Raised for the summit"},
+  {"date": "2026-09-09", "competitor": "The Belmont", "rate_multiplier": 1.19, "note": ""},
+  {"date": "2026-09-20", "competitor": "Casa Alameda", "rate_multiplier": 0.76, "note": "Flash sale"},
+  {"date": "2026-09-20", "competitor": "Riverside Court", "rate_multiplier": 0.79, "note": ""},
+  {"date": "2026-09-21", "competitor": "Casa Alameda", "rate_multiplier": 0.75, "note": "Flash sale"},
+  {"date": "2026-09-21", "competitor": "Riverside Court", "rate_multiplier": 0.78, "note": ""}
+]
